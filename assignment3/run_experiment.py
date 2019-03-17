@@ -88,19 +88,19 @@ if __name__ == '__main__':
 
     datasets = []
     dataset1_details = {
+    'data': loader.AdultData(verbose=verbose, seed=seed),
+    'name': 'adult',
+    'readable_name': 'Adult',
+    'best_nn_params': {'NN__activation': ['logistic'], 'NN__alpha': [1.0],
+                       'NN__hidden_layer_sizes': [(36, 36)], 'NN__learning_rate_init': [0.016]}
+    }
+    dataset2_details = {
             'data': loader.StatlogVehicleData(verbose=verbose, seed=seed),
             'name': 'statlog_vehicle',
             'readable_name': 'Statlog Vehicle',
             'best_nn_params': {'NN__activation': ['relu'], 'NN__alpha': [1.0],
                                'NN__hidden_layer_sizes': [(36, 36)], 'NN__learning_rate_init': [0.016]}
         }
-    dataset2_details = {
-            'data': loader.HTRU2Data(verbose=verbose, seed=seed),
-            'name': 'htru2',
-            'readable_name': 'HTRU2',
-            'best_nn_params': {'NN__activation': ['relu'], 'NN__alpha': [1.0],
-                               'NN__hidden_layer_sizes': [(36, 36)], 'NN__learning_rate_init': [0.016]}
-    }
     if args.dataset1:
         datasets.append(dataset1_details)
     elif args.dataset2:
