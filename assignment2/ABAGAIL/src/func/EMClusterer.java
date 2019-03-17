@@ -48,7 +48,7 @@ public class EMClusterer extends AbstractConditionalDistribution implements Func
     private int iterations;
     
     /**
-     * Whether to print stuff
+     * Whether to print(st)uff
      */
     private boolean debug = false;
     
